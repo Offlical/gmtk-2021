@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
 
     public void Die()
     {
+        if (gameEnd)
+            return;
         gameEnd = true;
         endScreen.SetActive(true);
         rocket.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
@@ -55,9 +57,9 @@ public class GameManager : MonoBehaviour
         else if (PlayerPrefs.GetFloat("_highScore") < score)
             PlayerPrefs.SetFloat("_highScore", score);
         else
-            highScoreText.text = "Highest Score: " + PlayerPrefs.GetFloat("_highScore");
+            highScoreText.text = "Highest Score: " + PlayerPrefs.GetFloat("_highScore").ToString("0");
 
-        endScoreText.text = "Score: " + score;
+        endScoreText.text = "Score: " + score.ToString("0");
     }
 
     public void QuitToMenu()

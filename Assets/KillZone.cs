@@ -14,7 +14,11 @@ public class KillZone : MonoBehaviour
 
     private void Update()
     {
-        if (Vector2.Distance(transform.position, rocket.position) > 30)
+        Vector2 currentLoc = transform.position;
+        currentLoc.x = rocket.position.x;
+
+        transform.position = currentLoc;
+        if (Vector2.Distance(transform.position, rocket.position) > 25)
             transform.position = rocket.position - new Vector3(0, 20,0);
     }
 

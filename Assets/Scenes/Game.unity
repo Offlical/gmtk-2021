@@ -16564,8 +16564,8 @@ MonoBehaviour:
   rightBar: {fileID: 0}
   leftBar: {fileID: 0}
   middleBar: {fileID: 0}
-  gasGain: 0.0007
-  gasUse: 0.01
+  gasGain: 0.023
+  gasUse: 0.0087
   endScoreText: {fileID: 1461706510}
   highScoreText: {fileID: 1067989063}
   rocket: {fileID: 2108005478}
@@ -16669,9 +16669,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1329827484}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1329827485}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: QuitToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19275,7 +19275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2108005481}
-  maxVelocity: {x: 1, y: 1}
+  maxVelocity: {x: 1, y: 2.5}
   rightMotor: {fileID: 18786405}
   middleMotor: {fileID: 1634110612}
   leftMotor: {fileID: 75797774}
